@@ -1,3 +1,83 @@
+/* For tablets/smaller screens (adjust 768px to match Figma) */
+@media (min-width: 1200px) {
+    .section-container, .footer-container {
+        max-width: 1200px; /* or your desired maximum */
+        margin: 0 auto; /* center the container */
+    }
+
+    .true-section-container {
+        padding-left: 50px;
+      }
+    .true-section-container h2 {
+        font-size: 36px;
+        line-height: 44px;
+      }
+    .true-section-container h4 {
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 100px;
+      }
+  }
+
+  @media (max-width: 768px) {
+    .logo-container {
+      padding: 12px 20px; /* Reduce left padding on smaller screens */
+    }
+
+    .nav-menu {
+        margin-right: 20px; /* Match mobile padding */
+      }
+
+    .true-section-container {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+    .true-section-container h2 {
+        font-size: 28px;
+        line-height: 36px;
+      }
+    .true-section-container h4 {
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 80px;
+      }
+    .slide { flex: 0 0 100%; max-width: 100%; }
+    .carousel-wrapper { max-width: 100%; }
+
+    .carousel-btn { font-size: 1.5rem; }
+    .caption h3 { font-size: 1.1rem; }
+    .caption h4 { font-size: 0.9rem; }
+  }
+  
+  /* For mobile (adjust 480px if needed) */
+  @media (max-width: 480px) {
+    .logo-container img {
+      max-width: 150px; /* Smaller logo for mobile */
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+        margin-right: 20px; /* Adjust as needed */
+    }
+    
+    .nav-menu a {
+        font-size: 14px; /* Optional: slightly smaller text on mobile */
+    }
+
+    .true-section-container h2 {
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 80px;
+    }
+    
+    .true-section-container h4 {
+        font-size: 14px;
+        line-height: 20px;
+        max-width: 90%;
+    }
+  }
+
 /* Reset default browser styles */
 * {
     margin: 0;
@@ -7,7 +87,7 @@
   
   /* Base font (update with Figma font later) */
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
   }
 
   .logo-container {
@@ -25,29 +105,6 @@
     height: auto;     /* Maintain aspect ratio */
   }
 
-  /* For tablets/smaller screens (adjust 768px to match Figma) */
-  @media (max-width: 768px) {
-    .logo-container {
-      padding: 12px 20px; /* Reduce left padding on smaller screens */
-    }
-
-    .nav-menu {
-        margin-right: 20px; /* Match mobile padding */
-      }
-  }
-  
-  /* For mobile (adjust 480px if needed) */
-  @media (max-width: 480px) {
-    .logo-container img {
-      max-width: 150px; /* Smaller logo for mobile */
-    }
-
-    .nav-menu {
-        flex-direction: column; /* Stack vertically on mobile */
-        gap: 10px;
-      }
-  }
-
   .nav-menu {
     display: flex;
     align-items: center; /* Vertical alignment with logo */
@@ -56,26 +113,23 @@
   }
   
   .nav-menu a {
-    color: #429BF4;
+    color: #475467; /* Default color */
     text-decoration: none;
-    font-weight: 500;
-    font-weight: bold;
-    text-transform: uppercase; /* If the design uses uppercase */
-    font-size: 16px; /* Adjust to match Figma */
-
-    font-family: 'Inter', sans-serif; /* Using Inter font */
-    
-    /* Exact dimensions */
-    /* width: 83px;
-    height: 24px; */
+    font-family: 'Inter', sans-serif;
+    font-weight: 600; /* Semi-bold (Inter's weight scale) */
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+    text-transform: uppercase;
     
     /* Center text in the box */
     display: flex;
     align-items: center;
     justify-content: center;
     
-    /* Optional: Add transition for hover effects */
-    /* transition: all 0.2s ease; */
+    /* Smooth transition for hover effects */
+    transition: color 0.2s ease-in-out;
+
   }
   
   /* If you need to support older browsers without gap support */
@@ -85,14 +139,81 @@
   
   /* Hover effect (optional) */
   .nav-menu a:hover {
-    opacity: 0.8;
-    /* text-decoration: underline; */
+    color: #429BF4; /* Hover color */
   }
 
   .section-container { /* Replace .container with the actual class or ID of the image's container */
-    text-align: center;
+    width: 100%;
+    overflow: hidden; /* Prevent any potential scrollbars */
+  }
+
+  .section-container img {
+    width: 100%; /* Make images fill their container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any default inline spacing */
   }
 
   .footer-container {
-    text-align: center;
+    width: 100%;
+    overflow: hidden; /* Prevent any potential scrollbars */
   }
+
+  .footer-container img {
+    width: 100%; /* Make image fill its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any default inline spacing */
+  }
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 622px;           /* exactly one slide’s width */
+    margin: 2rem auto;          /* center horizontally */
+    overflow: hidden;           /* clip extra slides */
+}
+  
+.carousel {
+    display: flex;              /* arrange slides in a row */ :contentReference[oaicite:0]{index=0}
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;     /* optimize animation */
+}
+  
+.slide {
+    flex: 0 0 622px;            /* flex-grow:0, flex-shrink:0, basis:622px */ :contentReference[oaicite:1]{index=1}
+    max-width: 622px;
+    box-sizing: border-box;
+    text-align: center;
+}
+  
+.slide img {
+    width: 622px;               /* enforce exact pixel width */
+    height: 401px;
+    object-fit: cover;          /* fill & crop to maintain aspect ratio */
+    display: block;
+
+}
+  
+.caption {
+    padding: 1rem 0;
+}
+  
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    z-index: 1;
+}
+  
+.prev-btn {
+    left: 10px;
+}
+  
+.next-btn {
+    right: 10px;
+}

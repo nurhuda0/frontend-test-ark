@@ -1,31 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-
-    <title>Front-End WP Test – Arka'an Nurhuda</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <title>Front-End WP Test – Arka'an Nurhuda</title>
 </head>
 <body>
-    <nav class="logo-container">
-        <img src="assets/images/Logo Properly.png" alt="logo properly">
+  <nav class="logo-container">
+    <img src="assets/images/Logo Properly.png" alt="logo properly">
+    <div class="nav-menu">
+      <a href="#about">About Us</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#info">Information</a>
+    </div>
+  </nav>
 
-        <div class="nav-menu">
-            <a href="#about">About Us</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#info">Information</a>
+  <div class="section-container">
+    <img class="section-one" src="assets/images/Frame Top.svg" alt="section one">
+  </div>
+
+  <div class="true-section-container">
+    <img class="section-content" src="assets/images/Middle Content.svg" alt="middle content">
+
+    <div class="carousel-wrapper">
+      <button class="carousel-btn prev-btn" aria-label="Previous slide">&#10094;</button>
+      <div class="carousel">
+        <div class="slide">
+          <img src="assets/images/Rumah Base 1.svg" alt="Slide 1">
+          <div class="caption">
+            <h3>BASE 1</h3>
+            <h4>2 Bedrooms<br>Pre-launch: Prices TBA<br/>Our flagship model encompasses all the essentials. It's compact yet spacious, efficient yet adaptable.</h4>
+          </div>
         </div>
-    </nav>
-
-    <div class="section-container">
-        <img class="section-one" src="assets\images\Frame Top.svg" alt="section one">
-        <img class="section-two" src="assets\images\Frame Middle.svg" alt="section two">
+        <div class="slide">
+          <img src="assets/images/Rumah Base 2.svg" alt="Slide 2">
+          <div class="caption">
+            <h3>BASE 2</h3>
+            <h4>3 Bedrooms<br>Pre-launch: Prices TBA<br/>Our flagship model encompasses all the essentials. It's compact yet spacious, efficient yet adaptable.</h4>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/images/Rumah Base 3.svg" alt="Slide 3">
+          <div class="caption">
+            <h3>BASE 3</h3>
+            <h4>2 Bedrooms<br>Pre-launch: Prices TBA<br/>Our flagship model encompasses all the essentials. It's compact yet spacious, efficient yet adaptable.</h4>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/images/Rumah Base 4.png" alt="Slide 4">
+          <div class="caption">
+            <h3>BASE 4</h3>
+            <h4>2 Bedrooms<br>Pre-launch: Prices TBA<br/>Our flagship model encompasses all the essentials. It's compact yet spacious, efficient yet adaptable.</h4>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/images/Rumah Base 5.png" alt="Slide 5">
+          <div class="caption">
+            <h3>BASE 5</h3>
+            <h4>2 Bedrooms<br>Pre-launch: Prices TBA<br/>Our flagship model encompasses all the essentials. It's compact yet spacious, efficient yet adaptable.</h4>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn next-btn" aria-label="Next slide">&#10095;</button>
     </div>
 
-    <div class="footer-container">
-        <img src="assets\images\Frame Footer.svg" alt="footer">
-    </div>
-    
+  </div>
+
+  <!-- <div class="section-container">
+    <img class="section-two" src="assets/images/Frame Middle.svg" alt="section two">
+  </div> -->
+
+  <div class="footer-container">
+    <img src="assets/images/Frame Footer.svg" alt="footer">
+  </div>
+
+  <script src="js/carousel.js" defer></script>
 </body>
 </html>
