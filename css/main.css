@@ -1,0 +1,40 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Base font (update with Figma font later) */
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  .logo-container {
+    /* Flexbox to align items horizontally */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    /* Your requested padding */
+    padding: 12px 0 12px 80px; /* Top | Right | Bottom | Left */
+  }
+  
+  .logo-container img {
+    max-width: 200px; /* Control logo size */
+    height: auto;     /* Maintain aspect ratio */
+  }
+
+  /* For tablets/smaller screens (adjust 768px to match Figma) */
+  @media (max-width: 768px) {
+    .logo-container {
+      padding: 12px 20px; /* Reduce left padding on smaller screens */
+    }
+  }
+  
+  /* For mobile (adjust 480px if needed) */
+  @media (max-width: 480px) {
+    .logo-container img {
+      max-width: 150px; /* Smaller logo for mobile */
+    }
+  }
