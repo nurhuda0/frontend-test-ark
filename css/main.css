@@ -17,7 +17,7 @@
     align-items: center;
   
     /* Your requested padding */
-    padding: 12px 0 12px 80px; /* Top | Right | Bottom | Left */
+    padding: 13px 0 13px 75px; /* Top | Right | Bottom | Left */
   }
   
   .logo-container img {
@@ -30,6 +30,10 @@
     .logo-container {
       padding: 12px 20px; /* Reduce left padding on smaller screens */
     }
+
+    .nav-menu {
+        margin-right: 20px; /* Match mobile padding */
+      }
   }
   
   /* For mobile (adjust 480px if needed) */
@@ -37,4 +41,58 @@
     .logo-container img {
       max-width: 150px; /* Smaller logo for mobile */
     }
+
+    .nav-menu {
+        flex-direction: column; /* Stack vertically on mobile */
+        gap: 10px;
+      }
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center; /* Vertical alignment with logo */
+    gap: 20px; /* Space between items */
+    margin-right: 80px; /* Match logo's left padding for balance */
+  }
+  
+  .nav-menu a {
+    color: #429BF4;
+    text-decoration: none;
+    font-weight: 500;
+    font-weight: bold;
+    text-transform: uppercase; /* If the design uses uppercase */
+    font-size: 16px; /* Adjust to match Figma */
+
+    font-family: 'Inter', sans-serif; /* Using Inter font */
+    
+    /* Exact dimensions */
+    /* width: 83px;
+    height: 24px; */
+    
+    /* Center text in the box */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Optional: Add transition for hover effects */
+    /* transition: all 0.2s ease; */
+  }
+  
+  /* If you need to support older browsers without gap support */
+  .nav-menu a:not(:last-child) {
+    margin-right: 20px;
+  }
+  
+  /* Hover effect (optional) */
+  .nav-menu a:hover {
+    opacity: 0.8;
+    /* text-decoration: underline; */
+  }
+
+  .section-container { /* Replace .container with the actual class or ID of the image's container */
+    text-align: center;
+  }
+
+  .footer-container {
+    text-align: center;
   }
